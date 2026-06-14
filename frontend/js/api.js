@@ -1,4 +1,4 @@
-const API = "http://127.0.0.1:8000";
+const API = "http://54.210.67.108:8000";
 
 // guarda/lee el token de sesion en el navegador
 function guardarSesion(token, usuario) {
