@@ -1,0 +1,6 @@
+fastapi[standard]
+sqlmodel
+bcrypt
+pyjwt
+boto3
+python-dotenv

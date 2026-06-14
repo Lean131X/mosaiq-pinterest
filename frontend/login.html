@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosaiq - Iniciar sesion</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <a href="index.html" class="logo">Mosa<span class="logo__acento">iq</span></a>
+    </header>
+
+    <!-- FORMULARIO DE INICIO DE SESION -->
+    <main class="acceso">
+        <section class="acceso__tarjeta">
+            <h1 class="acceso__titulo">Iniciar sesion</h1>
+            <p class="acceso__subtitulo">Bienvenido de nuevo a Mosaiq</p>
+
+            <form class="formulario">
+                <div class="formulario__campo">
+                    <label class="formulario__etiqueta" for="correo">Correo electronico</label>
+                    <input class="formulario__control" type="email" id="correo" placeholder="tucorreo@ejemplo.com">
+                </div>
+
+                <div class="formulario__campo">
+                    <label class="formulario__etiqueta" for="clave">Contraseña</label>
+                    <input class="formulario__control formulario__control--password" type="password" id="clave" placeholder="Tu contraseña">
+                </div>
+
+                <button type="button" id="btnEntrar" class="boton boton--primario acceso__boton">Entrar</button>
+            </form>
+
+            <p class="acceso__pie">
+                No tienes cuenta? <a class="acceso__enlace" href="register.html">Registrate</a>
+            </p>
+        </section>
+    </main>
+
+    <!-- PIE -->
+    <footer class="pie">
+        <p>Mosaiq 2026 - Proyecto Integrador Cuarto Nivel</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

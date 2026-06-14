@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosaiq - Registro</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <a href="index.html" class="logo">Mosa<span class="logo__acento">iq</span></a>
+    </header>
+
+    <!-- FORMULARIO DE REGISTRO -->
+    <main class="acceso">
+        <section class="acceso__tarjeta">
+            <h1 class="acceso__titulo">Crear una cuenta</h1>
+            <p class="acceso__subtitulo">Unete a Mosaiq y comparte tu contenido</p>
+
+            <form class="formulario">
+                <div class="formulario__campo">
+                    <label class="formulario__etiqueta" for="nombre">Nombre de usuario</label>
+                    <input class="formulario__control" type="text" id="nombre" placeholder="Ej: leandro_j">
+                </div>
+
+                <div class="formulario__campo">
+                    <label class="formulario__etiqueta" for="correo">Correo electronico</label>
+                    <input class="formulario__control" type="email" id="correo" placeholder="tucorreo@ejemplo.com">
+                </div>
+
+                <div class="formulario__campo">
+                    <label class="formulario__etiqueta" for="clave">Contraseña</label>
+                    <input class="formulario__control formulario__control--password" type="password" id="clave"
+                        placeholder="Minimo 8 caracteres">
+                </div>
+
+                <div class="formulario__campo">
+                    <label class="formulario__etiqueta" for="clave2">Confirmar contraseña</label>
+                    <input class="formulario__control formulario__control--password" type="password" id="clave2"
+                        placeholder="Repite tu contraseña">
+                </div>
+
+                <div class="formulario__campo formulario__campo--terminos">
+                    <input class="formulario__check" type="checkbox" id="terminos">
+                    <label class="formulario__etiqueta" for="terminos">Acepto los</label>
+                    <a class="formulario__terminos-enlace" href="terminos.html" target="_blank" rel="noopener">terminos
+                        de uso</a>
+                </div>
+
+                <button type="button" id="btnRegistrar" class="boton boton--primario acceso__boton">Registrarme</button>
+            </form>
+
+            <p class="acceso__pie">
+                Ya tienes cuenta? <a class="acceso__enlace" href="login.html">Inicia sesion</a>
+            </p>
+        </section>
+    </main>
+
+    <!-- PIE -->
+    <footer class="pie">
+        <p>Mosaiq 2026 - Proyecto Integrador Cuarto Nivel</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/register.js"></script>
+
+</body>
+
+</html>

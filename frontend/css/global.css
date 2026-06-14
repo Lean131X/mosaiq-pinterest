@@ -1,0 +1,138 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* variables globales */
+:root {
+  --azul-marino: #1A2B4A;
+  --azul-acento: #4A90E2;
+  --rojo: #E63946;
+  --gris-fondo: #F4F5F7;
+  --gris-borde: #E0E2E6;
+  --gris-texto: #6B7280;
+  --blanco: #FFFFFF;
+  --negro-texto: #1F2430;
+}
+
+/* BASE */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--gris-fondo);
+  color: var(--negro-texto);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ENCABEZADO (bloque) */
+.encabezado {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 24px;
+  background-color: var(--blanco);
+  border-bottom: 1px solid var(--gris-borde);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* LOGO (bloque) */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--rojo);
+}
+
+.logo__acento {
+  color: var(--rojo);
+}
+
+/* BUSQUEDA (bloque) */
+.busqueda {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background-color: var(--gris-fondo);
+  border: 1px solid var(--gris-borde);
+  border-radius: 22px;
+  padding: 8px 16px;
+}
+
+.busqueda__campo {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: var(--negro-texto);
+}
+
+/* BOTON (bloque + modificadores) */
+.boton {
+  border: none;
+  border-radius: 22px;
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.boton:active {
+  transform: scale(0.97);
+}
+
+.boton--primario {
+  background-color: var(--rojo);
+  color: var(--blanco);
+}
+
+.boton--primario:hover {
+  background-color: #C92D3A;
+}
+
+.boton--secundario {
+  background-color: var(--gris-fondo);
+  color: var(--azul-marino);
+}
+
+.boton--secundario:hover {
+  background-color: var(--gris-borde);
+}
+
+.boton--rojo {
+  background-color: var(--rojo);
+  color: var(--blanco);
+}
+
+.boton--rojo:hover {
+  background-color: #C92D3A;
+}
+
+/* enlace que se ve como nombre de usuario en el encabezado */
+.encabezado__usuario {
+  font-weight: bold;
+  color: var(--azul-marino);
+}
+
+/* PIE (bloque) */
+.pie {
+  text-align: center;
+  padding: 24px;
+  color: var(--gris-texto);
+  font-size: 13px;
+  border-top: 1px solid var(--gris-borde);
+  margin-top: 40px;
+}

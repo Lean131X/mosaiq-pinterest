@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosaiq - Inicio</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <a href="index.html" class="logo">Mosa<span class="logo__acento">iq</span></a>
+
+        <div class="busqueda">
+            <input type="search" class="busqueda__campo" placeholder="Buscar por titulo, descripcion o etiquetas...">
+        </div>
+
+        <a href="login.html" class="boton boton--secundario">Iniciar sesion</a>
+        <a href="register.html" class="boton boton--primario">Registrarse</a>
+    </header>
+
+    <!-- BARRA DE CATEGORIAS -->
+    <nav class="categorias"></nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="feed">
+        <h2 class="feed__titulo">Descubre contenido</h2>
+
+        <!-- MOSAICO DE PUBLICACIONES -->
+        <section class="mosaico"></section>
+
+        <!-- molde de la tarjeta: se clona en el JS por cada publicacion (no se muestra) -->
+        <article class="publicacion" id="molde-publicacion" hidden>
+            <a class="publicacion__enlace" href="#">
+                <figure class="publicacion__figura">
+                    <img class="publicacion__imagen" src="" alt="">
+                </figure>
+                <div class="publicacion__info">
+                    <h3 class="publicacion__titulo"></h3>
+                    <p class="publicacion__autor"></p>
+                </div>
+            </a>
+        </article>
+    </main>
+
+    <!-- PIE -->
+    <footer class="pie">
+        <p>Mosaiq 2026 - Proyecto Integrador Cuarto Nivel</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

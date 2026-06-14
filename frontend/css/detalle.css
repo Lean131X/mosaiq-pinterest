@@ -1,0 +1,257 @@
+/* CONTENEDOR (base movil) */
+.detalle {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/* TARJETA PRINCIPAL (base movil: apilada en vertical) */
+.detalle__tarjeta {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--blanco);
+  border: 1px solid var(--gris-borde);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.detalle__figura {
+  width: 100%;
+  background-color: var(--gris-borde);
+  line-height: 0;
+}
+
+.detalle__imagen {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* INFO (base movil) */
+.detalle__info {
+  width: 100%;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.detalle__titulo {
+  font-size: 24px;
+  color: var(--azul-marino);
+  margin-bottom: 8px;
+}
+
+.detalle__descripcion {
+  font-size: 14px;
+  color: var(--negro-texto);
+  margin-bottom: 18px;
+}
+
+/* AUTOR */
+.autor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--gris-borde);
+  margin-bottom: 16px;
+}
+
+.autor__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--azul-acento);
+  color: var(--blanco);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.autor__nombre {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--azul-marino);
+}
+
+.autor__fecha {
+  font-size: 12px;
+  color: var(--gris-texto);
+}
+
+/* ETIQUETAS */
+.detalle__etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.etiqueta {
+  background-color: var(--gris-fondo);
+  color: var(--azul-marino);
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 14px;
+}
+
+/* COMENTARIOS */
+.comentarios {
+  margin-top: 4px;
+}
+
+.comentarios__titulo {
+  font-size: 15px;
+  color: var(--azul-marino);
+  margin-bottom: 12px;
+}
+
+.comentarios__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.comentario {
+  display: flex;
+  gap: 10px;
+}
+
+/* el molde no se muestra (gana sobre el display:flex de arriba) */
+.comentario[hidden] {
+  display: none;
+}
+
+.comentario__avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: var(--gris-borde);
+  color: var(--azul-marino);
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.comentario__cuerpo {
+  background-color: var(--gris-fondo);
+  border-radius: 10px;
+  padding: 8px 12px;
+  flex: 1;
+}
+
+.comentario__autor {
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--azul-marino);
+}
+
+.comentario__texto {
+  font-size: 13px;
+  color: var(--negro-texto);
+}
+
+/* caja para escribir un comentario */
+.comentarios__nuevo {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.comentarios__campo {
+  flex: 1;
+  border: 1px solid var(--gris-borde);
+  border-radius: 18px;
+  padding: 9px 14px;
+  font-size: 13px;
+  outline: none;
+}
+
+.comentarios__campo:focus {
+  border-color: var(--azul-acento);
+}
+
+.comentarios__aviso {
+  font-size: 13px;
+  color: var(--gris-texto);
+}
+
+/* RELACIONADAS */
+.relacionadas {
+  margin-top: 36px;
+}
+
+.relacionadas__titulo {
+  font-size: 18px;
+  color: var(--azul-marino);
+  margin-bottom: 16px;
+}
+
+/* MOSAICO (movil primero: una columna como base) */
+.mosaico {
+  column-width: 200px;
+  column-gap: 16px;
+}
+
+.publicacion {
+  break-inside: avoid;
+  margin-bottom: 16px;
+  background-color: var(--blanco);
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--gris-borde);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.publicacion:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(26, 43, 74, 0.15);
+}
+
+.publicacion__enlace {
+  display: block;
+  color: inherit;
+}
+
+.publicacion__figura {
+  width: 100%;
+  background-color: var(--gris-borde);
+  line-height: 0;
+}
+
+.publicacion__imagen {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.publicacion__info {
+  padding: 10px 12px;
+}
+
+.publicacion__titulo {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--negro-texto);
+  margin-bottom: 4px;
+}
+
+.publicacion__autor {
+  font-size: 12px;
+  color: var(--gris-texto);
+}
+
+/* RESPONSIVE (movil primero) */
+@media (min-width: 481px) {
+  .detalle { padding: 0 24px; }
+}
+@media (min-width: 851px) {
+  .detalle__tarjeta { flex-direction: row; }
+  .detalle__figura,
+  .detalle__info { width: 50%; }
+}

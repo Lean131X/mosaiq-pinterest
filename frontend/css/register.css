@@ -1,0 +1,130 @@
+/* CONTENEDOR */
+.acceso {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px);
+  padding: 30px 20px;
+}
+
+/* TARJETA DEL FORMULARIO */
+.acceso__tarjeta {
+  background-color: var(--blanco);
+  border: 1px solid var(--gris-borde);
+  border-radius: 16px;
+  padding: 28px 22px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 4px 16px rgba(26, 43, 74, 0.08);
+}
+
+.acceso__titulo {
+  font-size: 24px;
+  color: var(--azul-marino);
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.acceso__subtitulo {
+  font-size: 14px;
+  color: var(--gris-texto);
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.acceso__boton {
+  margin-top: 8px;
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+}
+
+.acceso__pie {
+  text-align: center;
+  font-size: 13px;
+  color: var(--gris-texto);
+  margin-top: 20px;
+}
+
+.acceso__enlace {
+  color: var(--azul-acento);
+  font-weight: bold;
+}
+
+.acceso__enlace:hover {
+  text-decoration: underline;
+}
+
+/* FORMULARIO */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formulario__campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* modificador: la fila de terminos va horizontal (checkbox + texto) */
+.formulario__campo--terminos {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.formulario__etiqueta {
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--azul-marino);
+}
+
+/* en la fila de terminos la etiqueta es texto normal, no negrita */
+.formulario__campo--terminos .formulario__etiqueta {
+  font-weight: normal;
+  color: var(--negro-texto);
+}
+
+.formulario__control {
+  border: 1px solid var(--gris-borde);
+  border-radius: 8px;
+  padding: 11px 14px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.formulario__control:focus {
+  border-color: var(--azul-acento);
+}
+
+/* modificador: campo de contraseña */
+.formulario__control--password {
+  letter-spacing: 1px;
+}
+
+.formulario__check {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE (movil primero) */
+@media (min-width: 481px) {
+  .acceso__tarjeta {
+    padding: 36px 32px;
+  }
+}
+
+/* enlace a los terminos dentro de la fila del checkbox */
+.formulario__terminos-enlace {
+  font-size: 13px;
+  color: var(--azul-acento);
+  font-weight: bold;
+}
+
+.formulario__terminos-enlace:hover {
+  text-decoration: underline;
+}

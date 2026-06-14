@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Base de datos local
+*.sqlite3
+
+# Variables de entorno (claves, secretos)
+.env
+
+# Sistema
+.DS_Store

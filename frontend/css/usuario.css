@@ -1,0 +1,238 @@
+/* PERFIL */
+.perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px 24px 24px;
+  background-color: var(--blanco);
+  border-bottom: 1px solid var(--gris-borde);
+}
+
+.perfil__avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: var(--azul-acento);
+  color: var(--blanco);
+  font-size: 44px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.perfil__nombre {
+  font-size: 24px;
+  color: var(--azul-marino);
+  margin-bottom: 4px;
+}
+
+.perfil__usuario {
+  font-size: 14px;
+  color: var(--gris-texto);
+  margin-bottom: 6px;
+}
+
+.perfil__datos {
+  font-size: 13px;
+  color: var(--gris-texto);
+  margin-bottom: 18px;
+}
+
+/* PUBLICACIONES (seccion) (base movil) */
+.publicaciones {
+  padding: 16px;
+}
+
+.publicaciones__titulo {
+  font-size: 18px;
+  color: var(--azul-marino);
+  margin-bottom: 16px;
+}
+
+/* MOSAICO (movil primero: una sola columna como base) */
+.mosaico {
+  column-width: 230px;
+  column-gap: 16px;
+}
+
+/* PUBLICACION (tarjeta) */
+.publicacion {
+  break-inside: avoid;
+  margin-bottom: 16px;
+  background-color: var(--blanco);
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--gris-borde);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.publicacion:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(26, 43, 74, 0.15);
+}
+
+.publicacion__enlace {
+  display: block;
+  color: inherit;
+}
+
+.publicacion__figura {
+  width: 100%;
+  background-color: var(--gris-borde);
+  line-height: 0;
+}
+
+.publicacion__imagen {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.publicacion__info {
+  padding: 10px 12px;
+}
+
+.publicacion__titulo {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--negro-texto);
+  margin-bottom: 4px;
+}
+
+.publicacion__autor {
+  font-size: 12px;
+  color: var(--gris-texto);
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 43, 74, 0.55);
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  padding: 20px;
+}
+
+/* se muestra cuando la URL apunta al id del modal */
+.modal:target {
+  display: flex;
+}
+
+.modal__caja {
+  background-color: var(--blanco);
+  border-radius: 16px;
+  padding: 28px;
+  width: 100%;
+  max-width: 440px;
+}
+
+.modal__cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal__titulo {
+  font-size: 20px;
+  color: var(--azul-marino);
+}
+
+.modal__cerrar {
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--gris-texto);
+  line-height: 1;
+}
+
+.modal__cerrar:hover {
+  color: var(--rojo);
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.modal__campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.modal__etiqueta {
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--azul-marino);
+}
+
+.modal__control {
+  border: 1px solid var(--gris-borde);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  outline: none;
+}
+
+.modal__control:focus {
+  border-color: var(--azul-acento);
+}
+
+.modal__boton {
+  margin-top: 4px;
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+}
+
+/* ACCIONES SOBRE CADA PIN (solo en el perfil, son todos tuyos) */
+.publicacion__acciones {
+  display: flex;
+  gap: 8px;
+  padding: 0 12px 12px;
+}
+
+.publicacion__accion {
+  font-size: 12px;
+  padding: 5px 10px;
+  border: 1px solid var(--gris-borde);
+  border-radius: 8px;
+  background-color: var(--blanco);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.publicacion__accion--editar {
+  color: var(--azul-marino);
+}
+
+.publicacion__accion--editar:hover {
+  background-color: var(--gris-fondo);
+}
+
+.publicacion__accion--eliminar {
+  color: var(--rojo);
+  border-color: var(--rojo);
+}
+
+.publicacion__accion--eliminar:hover {
+  background-color: var(--rojo);
+  color: var(--blanco);
+}
+
+/* RESPONSIVE (movil primero) */
+@media (min-width: 481px) {
+  .publicaciones { padding: 24px; }
+}

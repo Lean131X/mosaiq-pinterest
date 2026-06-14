@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosaiq - Mi perfil</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/usuario.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <a href="index.html" class="logo">Mosa<span class="logo__acento">iq</span></a>
+
+        <div class="busqueda">
+            <input type="search" class="busqueda__campo" placeholder="Buscar por titulo, descripcion o etiquetas...">
+        </div>
+
+        <a href="#modalSubir" class="boton boton--rojo">+ Subir imagen</a>
+    </header>
+
+    <!-- CABECERA DEL PERFIL -->
+    <section class="perfil">
+        <div class="perfil__avatar" id="perfil-avatar"></div>
+        <h1 class="perfil__nombre" id="perfil-nombre"></h1>
+        <p class="perfil__usuario" id="perfil-usuario"></p>
+        <p class="perfil__datos" id="perfil-datos"></p>
+    </section>
+
+    <!-- PUBLICACIONES DEL USUARIO -->
+    <main class="publicaciones">
+        <h2 class="publicaciones__titulo">Mis publicaciones</h2>
+
+        <section class="mosaico" id="mosaico-usuario"></section>
+
+        <!-- molde de la tarjeta: se clona en el JS por cada publicacion (no se muestra) -->
+        <article class="publicacion" id="molde-publicacion" hidden>
+            <a class="publicacion__enlace" href="#">
+                <figure class="publicacion__figura">
+                    <img class="publicacion__imagen" src="" alt="">
+                </figure>
+                <div class="publicacion__info">
+                    <h3 class="publicacion__titulo"></h3>
+                    <p class="publicacion__autor"></p>
+                </div>
+            </a>
+            <div class="publicacion__acciones">
+                <a href="#modalEditar" class="publicacion__accion publicacion__accion--editar">Editar</a>
+                <button type="button" class="publicacion__accion publicacion__accion--eliminar">Eliminar</button>
+            </div>
+        </article>
+    </main>
+
+    <!-- MODAL DE SUBIR IMAGEN (se abre con :target en CSS) -->
+    <div class="modal" id="modalSubir">
+        <div class="modal__caja">
+            <header class="modal__cabecera">
+                <h2 class="modal__titulo">Subir nueva imagen</h2>
+                <a href="#" class="modal__cerrar">&times;</a>
+            </header>
+
+            <form class="modal__form">
+                <div class="modal__campo">
+                    <label class="modal__etiqueta" for="imagenImg">Imagen</label>
+                    <input class="modal__control" type="file" id="imagenImg" accept="image/*">
+                </div>
+
+                <div class="modal__campo">
+                    <label class="modal__etiqueta" for="tituloImg">Titulo</label>
+                    <input class="modal__control" type="text" id="tituloImg" placeholder="Ponle un titulo a tu imagen">
+                </div>
+
+                <div class="modal__campo">
+                    <label class="modal__etiqueta" for="descripcionImg">Descripcion</label>
+                    <input class="modal__control" type="text" id="descripcionImg" placeholder="Describe tu imagen">
+                </div>
+
+                <div class="modal__campo">
+                    <label class="modal__etiqueta" for="categoriaImg">Categoria</label>
+                    <select class="modal__control" id="categoriaImg"></select>
+                </div>
+
+                <div class="modal__campo">
+                    <label class="modal__etiqueta" for="tagsImg">Etiquetas</label>
+                    <input class="modal__control" type="text" id="tagsImg" placeholder="Separadas por comas">
+                </div>
+
+                <button type="button" id="btnPublicar" class="boton boton--primario modal__boton">Publicar</button>
+            </form>
+        </div>
+    </div>
+    <!-- MODAL EDITAR PIN -->
+    <div class="modal" id="modalEditar">
+        <div class="modal__caja">
+            <header class="modal__cabecera">
+                <h2 class="modal__titulo">Editar pin</h2>
+                <a href="#" class="modal__cerrar">&times;</a>
+            </header>
+
+            <form class="modal__form">
+                <input type="hidden" id="editarId">
+
+                <div class="modal__campo">
+                    <label class="modal__etiqueta" for="editarTitulo">Titulo</label>
+                    <input class="modal__control" type="text" id="editarTitulo">
+                </div>
+
+                <div class="modal__campo">
+                    <label class="modal__etiqueta" for="editarDescripcion">Descripcion</label>
+                    <input class="modal__control" type="text" id="editarDescripcion">
+                </div>
+
+                <div class="modal__campo">
+                    <label class="modal__etiqueta" for="editarCategoria">Categoria</label>
+                    <select class="modal__control" id="editarCategoria"></select>
+                </div>
+
+                <div class="modal__campo">
+                    <label class="modal__etiqueta" for="editarTags">Etiquetas</label>
+                    <input class="modal__control" type="text" id="editarTags" placeholder="Separadas por comas">
+                </div>
+
+                <button type="button" id="btnGuardarEdicion" class="boton boton--primario modal__boton">Guardar
+                    cambios</button>
+            </form>
+        </div>
+    </div>
+    <!-- PIE -->
+    <footer class="pie">
+        <p>Mosaiq 2026 - Proyecto Integrador Cuarto Nivel</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/usuario.js"></script>
+
+</body>
+
+</html>
